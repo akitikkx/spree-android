@@ -53,6 +53,7 @@ public class ProductDetailPresenter implements ProductDetailContract.Presenter {
 
             @Override
             public void onDataNotAvailable() {
+                mView.showLoadingProgress(false);
 
             }
         });

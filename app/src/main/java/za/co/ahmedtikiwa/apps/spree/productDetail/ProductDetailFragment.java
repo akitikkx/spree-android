@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -32,6 +33,8 @@ public class ProductDetailFragment extends Fragment implements ProductDetailCont
     TextView mProductTitle;
     @BindView(R.id.product_price)
     TextView mProductPrice;
+    @BindView(R.id.progress_bar)
+    ProgressBar progressBar;
 
     @Nullable
     @Override
@@ -65,7 +68,9 @@ public class ProductDetailFragment extends Fragment implements ProductDetailCont
     @Override
     public void showLoadingProgress(boolean show) {
         if (show) {
-
+            progressBar.setVisibility(ProgressBar.VISIBLE);
+        } else {
+            progressBar.setVisibility(ProgressBar.GONE);
         }
     }
 
