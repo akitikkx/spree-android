@@ -4,4 +4,5 @@
     <string name="product_price">R%1$d</string>
     <string name="product_image">Product Image</string>
     <string name="product_image_path">https://www.spree.co.za/api/v1/catalog/product/thumbnail/%1$s/thumbnail/345x464</string>
+    <string name="loading_content">Loading product content…</string>
 </resources>

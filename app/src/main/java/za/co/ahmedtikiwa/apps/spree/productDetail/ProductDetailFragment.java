@@ -2,6 +2,8 @@ package za.co.ahmedtikiwa.apps.spree.productDetail;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +37,8 @@ public class ProductDetailFragment extends Fragment implements ProductDetailCont
     TextView mProductPrice;
     @BindView(R.id.progress_bar)
     ProgressBar progressBar;
+    @BindView(R.id.main_content)
+    CoordinatorLayout mainContent;
 
     @Nullable
     @Override
@@ -69,6 +73,7 @@ public class ProductDetailFragment extends Fragment implements ProductDetailCont
     public void showLoadingProgress(boolean show) {
         if (show) {
             progressBar.setVisibility(ProgressBar.VISIBLE);
+            Snackbar.make(mainContent, getString(R.string.loading_content), Snackbar.LENGTH_SHORT).show();
         } else {
             progressBar.setVisibility(ProgressBar.GONE);
         }
