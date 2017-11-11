@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "300373316456",
+    "firebase_url": "https://spree-5ec51.firebaseio.com",
+    "project_id": "spree-5ec51",
+    "storage_bucket": "spree-5ec51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300373316456:android:71f0c179e882aa49",
+        "android_client_info": {
+          "package_name": "za.co.ahmedtikiwa.apps.spree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300373316456-jdum47jj48v7ivdoflqv82hqb7pt09em.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "za.co.ahmedtikiwa.apps.spree",
+            "certificate_hash": "1e89a2d772b596a0332916d646209c2af185910c"
+          }
+        },
+        {
+          "client_id": "300373316456-2qj7jr1cb4abv5d27ovnmtj5clggnfhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_sl9LzH-HzzMJgK3i8fP0gNVEGpMZY50"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300373316456-2qj7jr1cb4abv5d27ovnmtj5clggnfhd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
