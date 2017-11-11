@@ -20,6 +20,8 @@ public class ProductDetailContract {
         void showPrice(int price);
 
         void hidePrice();
+
+        void showEmptyState(boolean show);
     }
 
     interface Presenter extends BasePresenter {

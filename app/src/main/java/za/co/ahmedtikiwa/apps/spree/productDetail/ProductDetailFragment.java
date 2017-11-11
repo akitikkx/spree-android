@@ -39,6 +39,8 @@ public class ProductDetailFragment extends Fragment implements ProductDetailCont
     ProgressBar progressBar;
     @BindView(R.id.main_content)
     CoordinatorLayout mainContent;
+    @BindView(R.id.empty_state)
+    TextView emptyState;
 
     @Nullable
     @Override
@@ -124,5 +126,15 @@ public class ProductDetailFragment extends Fragment implements ProductDetailCont
     @Override
     public void hidePrice() {
         mProductPrice.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void showEmptyState(boolean show) {
+        if (show) {
+            emptyState.setVisibility(View.VISIBLE);
+            Snackbar.make(mainContent, getString(R.string.error_data_could_not_be_loaded), Snackbar.LENGTH_INDEFINITE).show();
+        } else {
+            emptyState.setVisibility(View.GONE);
+        }
     }
 }

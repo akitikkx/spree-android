@@ -5,4 +5,5 @@
     <string name="product_image">Product Image</string>
     <string name="product_image_path">https://www.spree.co.za/api/v1/catalog/product/thumbnail/%1$s/thumbnail/345x464</string>
     <string name="loading_content">Loading product content…</string>
+    <string name="error_data_could_not_be_loaded">There was an error retrieving the product information. This may be due to the network connection</string>
 </resources>

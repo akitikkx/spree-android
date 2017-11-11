@@ -2,7 +2,6 @@ package za.co.ahmedtikiwa.apps.spree.productDetail;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.google.common.base.Strings;
 
@@ -48,13 +47,14 @@ public class ProductDetailPresenter implements ProductDetailContract.Presenter {
             @Override
             public void onProductLoaded(Product product) {
                 mView.showLoadingProgress(false);
+                mView.showEmptyState(false);
                 showProduct(product);
             }
 
             @Override
             public void onDataNotAvailable() {
                 mView.showLoadingProgress(false);
-
+                mView.showEmptyState(true);
             }
         });
     }
@@ -63,7 +63,6 @@ public class ProductDetailPresenter implements ProductDetailContract.Presenter {
         String title = product.getTitle();
         int price = product.getPrice().getSelling();
         String image = IMAGE_PREFIX + mSku + IMAGE_SIZE_DEFINITIONS + product.getPics().getSmall();
-        Log.d("PDP", image);
 
         if (Strings.isNullOrEmpty(title)) {
             mView.hideTitle();
