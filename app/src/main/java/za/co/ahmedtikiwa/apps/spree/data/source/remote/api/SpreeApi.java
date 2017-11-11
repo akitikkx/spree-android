@@ -11,7 +11,7 @@ import za.co.ahmedtikiwa.apps.spree.data.Product;
 
 public class SpreeApi {
 
-    public static final String BASE_URL = "https://www.spree.co.za/api/";
+    private static final String BASE_URL = "https://www.spree.co.za/api/";
     private static SpreeApiInterface mSpreeService;
 
     public static SpreeApiInterface getSpreeApiClient() {
@@ -38,7 +38,7 @@ public class SpreeApi {
     }
 
     public interface SpreeApiInterface {
-        @GET("/v1/catalog/product/{sku}")
-        Call<Product> getProduct(@Path("sku") String sku);
+        @GET("v1/catalog/product/{sku}")
+        Call<Product> loadProduct(@Path("sku") String sku);
     }
 }

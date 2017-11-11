@@ -1,44 +1,43 @@
 package za.co.ahmedtikiwa.apps.spree.data;
 
-
 public class ProductPrice {
 
-    private Integer regular;
-    private Integer selling;
-    private Integer special_price;
-    private Integer mobicred_price;
+    private int regular;
+    private int selling;
+    private int special_price;
+    private int mobicred_price;
     private String special_from_date;
     private String special_to_date;
 
-    public Integer getRegular() {
+    public int getRegular() {
         return regular;
     }
 
-    public void setRegular(Integer regular) {
+    public void setRegular(int regular) {
         this.regular = regular;
     }
 
-    public Integer getSelling() {
+    public int getSelling() {
         return selling;
     }
 
-    public void setSelling(Integer selling) {
+    public void setSelling(int selling) {
         this.selling = selling;
     }
 
-    public Integer getSpecialPrice() {
+    public int getSpecialPrice() {
         return special_price;
     }
 
-    public void setSpecialPrice(Integer specialPrice) {
+    public void setSpecialPrice(int specialPrice) {
         this.special_price = specialPrice;
     }
 
-    public Integer getMobicredPrice() {
+    public int getMobicredPrice() {
         return mobicred_price;
     }
 
-    public void setMobicredPrice(Integer mobicredPrice) {
+    public void setMobicredPrice(int mobicredPrice) {
         this.mobicred_price = mobicredPrice;
     }
 

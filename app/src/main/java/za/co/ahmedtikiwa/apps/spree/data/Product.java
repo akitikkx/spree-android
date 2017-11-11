@@ -1,7 +1,5 @@
 package za.co.ahmedtikiwa.apps.spree.data;
 
-import android.util.AttributeSet;
-
 import java.util.List;
 
 public class Product {
@@ -22,7 +20,7 @@ public class Product {
     private ProductPaymentInfo payment_info;
     private ProductPics pics;
     private ProductMeasurementImage measurement_image;
-    private AttributeSet attribute_set;
+    private ProductAttributeSet attribute_set;
     private ProductFilters filters;
     private Integer status;
     private Integer visibility;
@@ -170,11 +168,11 @@ public class Product {
         this.measurement_image = measurementImage;
     }
 
-    public AttributeSet getAttributeSet() {
+    public ProductAttributeSet getAttributeSet() {
         return attribute_set;
     }
 
-    public void setAttributeSet(AttributeSet attributeSet) {
+    public void setAttributeSet(ProductAttributeSet attributeSet) {
         this.attribute_set = attributeSet;
     }
 

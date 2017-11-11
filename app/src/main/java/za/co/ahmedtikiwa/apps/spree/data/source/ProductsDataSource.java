@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 
 import za.co.ahmedtikiwa.apps.spree.data.Product;
 
-public interface ProductDataSource {
+public interface ProductsDataSource {
 
     interface GetProductCallback {
 

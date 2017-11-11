@@ -11,16 +11,32 @@ import za.co.ahmedtikiwa.apps.spree.data.source.remote.api.SpreeApi;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-public class ProductsRepository implements ProductDataSource {
+public class ProductsRepository implements ProductsDataSource {
 
     public static final String TAG = ProductsRepository.class.getSimpleName();
+
+    private static ProductsRepository INSTANCE = null;
+
+    private final ProductsDataSource mProductDataSource;
+
+    private ProductsRepository(@NonNull ProductsDataSource productDataSource) {
+        mProductDataSource = checkNotNull(productDataSource);
+    }
+
+    public static ProductsRepository getInstance(ProductsDataSource productsDataSource) {
+        if (INSTANCE == null) {
+            INSTANCE = new ProductsRepository(productsDataSource);
+        }
+
+        return INSTANCE;
+    }
 
     @Override
     public void getProduct(@NonNull String sku, @NonNull final GetProductCallback callback) {
         checkNotNull(sku);
         checkNotNull(callback);
 
-        Call<Product> productCall = SpreeApi.getSpreeApiClient().getProduct(sku);
+        Call<Product> productCall = SpreeApi.getSpreeApiClient().loadProduct(sku);
         productCall.enqueue(new Callback<Product>() {
             @Override
             public void onResponse(Call<Product> call, Response<Product> response) {
