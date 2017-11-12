@@ -12,7 +12,7 @@ MVP as recommended by the Google Android Architecture Blueprints
 - Glide to display the product image
 - Firebase Crash for crash reporting
 - Firebase Analytics for tracking
-- For simplicity as this is a basic app no persistence layer like Room was added as this layer
+- For simplicity, as this is a basic app, no persistence layer like Room was added as this layer
 is useful in ensuring that the user's data consumption is reduced and also
 giving them the ability to view the product information even when they don't have
 an internet connection available.
