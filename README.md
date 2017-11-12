@@ -1,4 +1,4 @@
-# Spree
+# Spree Demo
 
 This is a basic Android app whose aim is to display a product from the catalogue.
 
