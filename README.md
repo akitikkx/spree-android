@@ -18,6 +18,7 @@ giving them the ability to view the product information even when they don't hav
 an internet connection available.
 
 ### Screenshots
+![device promo](https://github.com/akitikkx/spree-android/blob/master/screenshots/device_promo.png "Spree demo promo on smartphone and tablet")
 ![device promo](https://github.com/akitikkx/spree-android/blob/master/screenshots/device-2017-11-11-214152.png "Spree demo on smartphone (portrait)")
 ![device promo](https://github.com/akitikkx/spree-android/blob/master/screenshots/device-2017-11-11-214247.png "Spree demo on smartphone (landscape)")
 ![device promo](https://github.com/akitikkx/spree-android/blob/master/screenshots/device-2017-11-11-203909.png "Spree demo on tablet (portrait)")
