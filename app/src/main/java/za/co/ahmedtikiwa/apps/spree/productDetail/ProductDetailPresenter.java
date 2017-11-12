@@ -41,6 +41,9 @@ public class ProductDetailPresenter implements ProductDetailContract.Presenter {
         openProduct();
     }
 
+    /**
+     * Retrieve the product information from the repository
+     */
     private void openProduct() {
         mView.showLoadingProgress(true);
         mProductsRepository.getProduct(mSku, new ProductsDataSource.GetProductCallback() {
@@ -59,6 +62,10 @@ public class ProductDetailPresenter implements ProductDetailContract.Presenter {
         });
     }
 
+    /**
+     * Display the product as fetched from the repository
+     * @param product
+     */
     private void showProduct(@NonNull Product product) {
         String title = product.getTitle();
         int price = product.getPrice().getSelling();

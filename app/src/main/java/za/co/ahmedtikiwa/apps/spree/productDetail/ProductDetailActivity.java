@@ -44,6 +44,7 @@ public class ProductDetailActivity extends AppCompatActivity {
             transaction.commit();
         }
 
+        // instantiate the presenter
         new ProductDetailPresenter(
                 sku,
                 ProductsRepository.getInstance(ProductsRemoteDataSource.getInstance()),
