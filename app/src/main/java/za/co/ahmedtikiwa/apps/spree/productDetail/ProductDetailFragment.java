@@ -85,7 +85,9 @@ public class ProductDetailFragment extends Fragment implements ProductDetailCont
     public void showTitle(String title) {
         mProductTitle.setVisibility(View.VISIBLE);
         mProductTitle.setText(title);
-        getActivity().setTitle(title);
+        if (isAdded()) {
+            getActivity().setTitle(title);
+        }
     }
 
     @Override
